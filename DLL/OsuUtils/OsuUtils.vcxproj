@@ -170,6 +170,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\dlldef.h" />
+    <ClInclude Include="include\lzma.h" />
     <ClInclude Include="include\osudb.h" />
     <ClInclude Include="include\osufile.h" />
     <ClInclude Include="include\replay.h" />

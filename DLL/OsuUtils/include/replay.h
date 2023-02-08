@@ -10,7 +10,7 @@ namespace Osu
 	* Class encapsulating a replay object
 	*
 	*/
-	class OSU_API Replay
+	class Replay
 	{
 	public:
 		/**
@@ -23,7 +23,7 @@ namespace Osu
 		/**
 		* Frees memory allocated in Replay()
 		*/
-		~Replay();
+		OSU_API ~Replay();
 
 		byte_t gameMode;
 		int_t gameVersion;
@@ -45,6 +45,11 @@ namespace Osu
 		char* replayData;
 		long_t onlineScoreID;
 	};
+
+	extern "C" OSU_API Replay * CreateReplayFromFile(const char* path);
+	extern "C" OSU_API void FreeReplay(Replay * ptr);
+
 }
+
 
 #endif

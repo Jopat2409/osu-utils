@@ -21,6 +21,8 @@ Osu::Replay::Replay(const char* filePath)
 	readFile.ReadType<int_t>(modsUsed);
 	readFile.ReadString(lifeBar);
 	readFile.ReadType<long_t>(timeStamp);
+	readFile.ReadLzma(replayData);
+	readFile.ReadType<long_t>(onlineScoreID);
 	readFile.Close();
 
 }
@@ -32,4 +34,14 @@ Osu::Replay::~Replay()
 	delete[] this->playerName;
 	delete[] this->lifeBar;
 	delete[] this->replayData;
+}
+
+Osu::Replay* Osu::CreateReplayFromFile( const char* path)
+{
+	return new Replay(path);
+}
+
+void Osu::FreeReplay(Replay* ptr)
+{
+	delete ptr;
 }
