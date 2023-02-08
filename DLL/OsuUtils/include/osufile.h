@@ -3,6 +3,7 @@
 
 #include <cstdint>
 #include <fstream>
+#include <iostream>
 #include "dlldef.h"
 
 #define MAX_FILE_BUFFER 8192
@@ -20,7 +21,7 @@ namespace Osu
 	/**
 	* Class used for loading osu filetypes
 	*/
-	class OSU_API OsuFile
+	class OsuFile
 	{
 	public:
 		OsuFile(const char* filePath);
@@ -35,9 +36,15 @@ namespace Osu
 		template <typename T>
 		void ReadType(T& dest)
 		{
+#ifdef OSUUTILS_VERBOSE
+			std::cout << "Reading new type" << std::endl;
+#endif
 			// wacky reinterpret pointer stuff
 			dest = *(T*)(this->inputStream + this->cPtr);
 			this->cPtr += sizeof(T);
+#ifdef OSUUTILS_VERBOSE
+			std::cout << "Read: " << dest << std::endl;
+#endif
 		}
 
 		/**
@@ -53,6 +60,13 @@ namespace Osu
 		* @param dest - Destination to read value to
 		*/
 		void ReadString(str_t& dest);
+
+		/**
+		* Read LZMA string from file
+		* 
+		* @param dest - Destination to read value to
+		*/
+		void ReadLzma(str_t& dest);
 
 	private:
 		unsigned long cPtr;
