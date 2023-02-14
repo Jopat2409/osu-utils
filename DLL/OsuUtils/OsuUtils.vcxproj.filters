@@ -21,7 +21,7 @@
     <ClCompile Include="src\dllmain.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="src\osudb.cpp">
+    <ClCompile Include="src\db.cpp">
       <Filter>Source Files\Osu</Filter>
     </ClCompile>
     <ClCompile Include="src\osufile.cpp">
@@ -30,12 +30,15 @@
     <ClCompile Include="src\replay.cpp">
       <Filter>Source Files\Osu</Filter>
     </ClCompile>
+    <ClCompile Include="src\beatmap.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="include\dlldef.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="include\osudb.h">
+    <ClInclude Include="include\db.h">
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\osufile.h">
@@ -45,6 +48,9 @@
       <Filter>Header Files</Filter>
     </ClInclude>
     <ClInclude Include="include\lzma.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="include\beatmap.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

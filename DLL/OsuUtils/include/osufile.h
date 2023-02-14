@@ -4,6 +4,7 @@
 #include <cstdint>
 #include <fstream>
 #include <iostream>
+#include <unordered_map>
 #include "dlldef.h"
 
 #define MAX_FILE_BUFFER 8192
@@ -15,6 +16,8 @@ typedef int32_t int_t;
 typedef int64_t long_t;
 typedef unsigned long ULEB128_t;
 typedef char* str_t;
+typedef int64_t datetime_t;
+typedef std::unordered_map<int, double> int_double_t;
 
 namespace Osu
 {

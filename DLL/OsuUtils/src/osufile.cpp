@@ -1,3 +1,10 @@
+/*
+* Class created to provide standard read methods that are used across most, if not all osu! file types
+* Created By: Joe Paton
+* Last Edited: 14/02/2023
+*/
+
+
 #include "..\include\osufile.h"
 #include <iostream>
 #include <assert.h>

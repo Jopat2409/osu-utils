@@ -1,3 +1,10 @@
+/*
+* Implementation of methods for reading .osr binary files.
+* Based on the wiki page https://osu.ppy.sh/wiki/en/Client/File_formats/Osr_%28file_format%29
+* Created by: Joe Paton
+* Last Edited: 14/02/2023
+*/
+
 #include "..\include\replay.h"
 
 Osu::Replay::Replay(const char* filePath)
